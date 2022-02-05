@@ -1,9 +1,8 @@
-# expo-template-native-base
+# Expo template
 
-The official NativeBase template for [Expo](https://docs.expo.io/)
+Expo template with the following items:
 
-## Usage
-
-```sh
-expo init my-app --template expo-template-native-base
-```
+* Native base UI
+* Navigation with menu and button tab bar
+* Navigation auth flow
+* Auth screens
