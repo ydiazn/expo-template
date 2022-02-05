@@ -4,6 +4,7 @@ import { Center, Button, Heading, Icon } from 'native-base';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { HomeScreen } from '../screens/home';
+import { NavigationHeader } from '../components/navigation';
 
 
 function TabBarIcon({ route, color, size }) {
@@ -36,6 +37,7 @@ const MainTabNavigator = () => (
   <Tab.Navigator
     initialRouteName="Home"
     screenOptions={({route}) => ({
+      header: NavigationHeader,
       tabBarIcon: props => (
         <TabBarIcon route={route} {...props} />
       )

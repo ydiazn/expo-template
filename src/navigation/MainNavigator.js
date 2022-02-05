@@ -4,6 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import MainTabNavigator from './TabNavigator.js';
 import { OtherScreen } from '../screens/other';
+import { NavigationHeader } from '../components/navigation';
+import { SideMenuScreen } from '../screens';
 
 
 export function StackScreen({ navigation }) {
@@ -13,12 +15,17 @@ export function StackScreen({ navigation }) {
     </Center>
   );
 }
+
 const Stack = createStackNavigator();
 
 
 export default function MainNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        header: NavigationHeader,
+      }}
+    >
       <Stack.Screen
         name="Tabbar"
         options={{
@@ -31,6 +38,13 @@ export default function MainNavigator() {
         component={StackScreen}
         options={{
           title: 'Stack screen'
+        }}
+      />
+      <Stack.Screen
+        name="SideMenu"
+        component={SideMenuScreen}
+        options={{
+          title: 'Menu',
         }}
       />
     </Stack.Navigator>
