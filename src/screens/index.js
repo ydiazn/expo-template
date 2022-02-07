@@ -1,4 +1,4 @@
-import SideMenuScreen from './SideMenu.js';
+import SideMenuScreen from './menu/SideMenu.js';
 
 
 export {

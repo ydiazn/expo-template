@@ -1,23 +1,13 @@
 import React from "react";
-import { extendTheme, NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 
+import theme from './src/theme';
 import Entry from './src/navigation/';
-
-
-// Define the config
-const config = {
-  useSystemColorMode: false,
-  initialColorMode: "dark",
-};
-
-
-// extend the theme
-export const theme = extendTheme({ config });
 
 
 export default function App() {
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <Entry />
     </NativeBaseProvider>
   );
